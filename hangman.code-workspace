@@ -1,0 +1,14 @@
+{
+  "folders": [
+	{
+		"path": "text_client"
+	},
+	{
+		"path": "hangman"
+	},
+	{
+		"path": "dictionary"
+	}
+],
+  "settings": {}
+}

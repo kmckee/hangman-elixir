@@ -58,7 +58,7 @@ defmodule ImplGameTest do
     game = Game.new_game("wombat")
     {game, tally} = Game.make_move(game, "w")
     assert tally.game_state == :good_guess
-    {game, tally} = Game.make_move(game, "o")
+    {_game, tally} = Game.make_move(game, "o")
     assert tally.game_state == :good_guess
   end
 
@@ -68,7 +68,7 @@ defmodule ImplGameTest do
     assert tally.game_state == :bad_guess
     {game, tally} = Game.make_move(game, "w")
     assert tally.game_state == :good_guess
-    {game, tally} = Game.make_move(game, "x")
+    {_game, tally} = Game.make_move(game, "x")
     assert tally.game_state == :bad_guess
   end
 
@@ -110,7 +110,7 @@ defmodule ImplGameTest do
       ["f", :bad_guess, 2, ["_", "e", "_", "_", "_"], ["a", "b", "c", "d", "e", "f"]],
       ["g", :bad_guess, 1, ["_", "e", "_", "_", "_"], ["a", "b", "c", "d", "e", "f", "g"]],
       ["h", :good_guess, 1, ["h", "e", "_", "_", "_"], ["a", "b", "c", "d", "e", "f", "g", "h"]],
-      ["i", :lost, 0, ["h", "e", "_", "_", "_"], ["a", "b", "c", "d", "e", "f", "g", "h", "i"]]
+      ["i", :lost, 0, ["h", "e", "l", "l", "o"], ["a", "b", "c", "d", "e", "f", "g", "h", "i"]]
     ]
     |> test_sequence_of_moves()
   end
