@@ -1,5 +1,5 @@
 defmodule Dictionary.Impl.WordList do
-  @type t :: list(String)
+  @type t :: list(String.t())
 
   @spec word_list() :: t
   def word_list do
