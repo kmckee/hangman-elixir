@@ -8,7 +8,7 @@ defmodule Hangman.Runtime.Server do
   @me __MODULE__
 
   ### Used by Client Process
-  def start_link do
+  def start_link(_) do
     GenServer.start_link(@me, nil)
   end
 
