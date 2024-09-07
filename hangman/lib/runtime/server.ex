@@ -15,6 +15,7 @@ defmodule Hangman.Runtime.Server do
   ### Used by Server Process
 
   def init(_) do
+    IO.puts("Starting Hangman Server")
     game = Game.new_game()
     {:ok, game}
   end
