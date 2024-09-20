@@ -4,10 +4,7 @@
   </div>
 
   <div class="w-full">
-    <p>Turns left: <%= @tally.turns_left %></p>
-    <p>Letters used: <%= @tally.used |> Enum.join(", ") %></p>
-    <p>Word so far: <%= @tally.letters |> Enum.join(" ") %></p>
-
+    <._tally_info tally={@tally} /> <br />
     <%= move_status(@tally.game_state) |> raw %><br />
     <.continue_or_try_again state={@tally.game_state} />
   </div>
